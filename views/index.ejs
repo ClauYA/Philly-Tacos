@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+    <title>Restaurant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <nav>
+                <div class="logo-title">
+                    <img src="img/logoblanco.png" alt="logo Philly Tacos ">
+                    <h3 class="title">Philly<span class="title title-second"> Tacos</span></h3>
+                </div>
+                <div>
+                    <a href="/menu" class="btn btn-xl btn-nav"></span> Menu</a>
+                    <a href="/catering" class="btn btn-xl btn-nav"></span> Catering</a>
+                    <a href="/find-us" class="btn btn-xl btn-nav"></span> Find Us</a>
+                    <a href="/our-story" class="btn btn-xl btn-nav"></span> Our Story</a>
+                    <a href="/login" class="btn btn-xl btn-nav"><span class="fa fa-user"></span> Login</a>
+                    <a href="/signup" class="btn btn-xl btn-nav"><span class="fa fa-user"></span> Signup</a>
+                <div>
+            </nav>
+        </header>
+        <section class="headline">
+            <h1 >AUTHENTIC MEXICAN<span class="title-second"> CUISINE</span></h1>
+            <p>Mexican cuisine is a reflection of the country's rich cultural diversity, characterized by a unique blend of ingredients and traditional techniques. With a base of corn, beans, and chilies, and a range of flavors from spicy to sweet, this cuisine offers a culinary experience deeply rooted in history and local traditions.</p>
+            <section class="container-btn-headline">
+                <button type="button" class="btn-primary btn-lg">View Menu</button>
+                <button type="button" class="btn-secondary btn-lg">Get a Catering Quote</button>
+            </section>
+        </section>
+    </main>
+    <section class="container-menu">
+        <div class="title-menu"> 
+            <h2>Taste of Philly Tacos</h2>
+            <p>Fresh, authentic, and made with love. These are the flavors our neighbors ask for again and again.</p>
+        </div>
+      <section class="container-platillo">
+        <% if (menu.length === 0) { %>
+            <p>There is no menu yet</p>
+        <% }else{ %>
+        <% menu.forEach((item,i) => { %>        
+            <!--<section class="card <%= i >= 4 ? 'is-hidden' : '' %>">-->
+            <section class="card">
+            <div class="card-img-wrap">
+                <img src="<%= item.image %>" alt="<%= item.title %>" class="img-food">
+                <h4 class="price-tag">$ <%= item.price %></h4>
+            </div>
+            <section class="card-information">
+                <strong class="card-category"><%= item.category %></strong>
+                <h4 class="card-title"><%= item.title%></h4>
+                <h4 class="card-description"><%= item.description %></h4>
+                
+            </section>
+            <button type="button" class="btn btn-primary btn-lg">Order Online</button>
+            </section>
+        <% }) %>
+        <% } %>
+        </section>  
+        <% if (menu.length > 4) { %>
+            <section class="menu-more">
+            <button type="button" id="toggle-menu" class="btn-secondary btn-lg">View full menu</button>
+            </section>
+        <% } %>
+            
+    </section> 
+    <footer>
+        <section class="container-footer">
+            <section class="footer-info">
+                <img src="img/logoblanco.png" alt="logo Philly Tacos " class="img-footer">
+                <span class="title">Philly<span class="title title-second"> Tacos</span></span>
+                <p>2011 Reed St </p>
+                <p>Philadelphia, PA 19146</p>
+            </section>
+            <section class="footer-info">
+                <h3>Contact Us:</h3>
+                <p><span class="fa fa-envelope"></span> <a href="mailto:info@phillytacos.com">info@phillytacos.com</a></p>
+                <p><span class="fa fa-envelope"></span> <a href="mailto:catering@phillytacos.com">catering@phillytacos.com</a></p>
+            </section>
+             <section class="footer-info">
+                <h3>Follow Us:</h3>
+                <a href="https://instagram.com" class="btn btn-nav" target="_blank">
+                    <i class="fa fa-instagram"></i> @Philly_tacos</a>
+                <a href="https://facebook.com" class="btn btn-nav" target="_blank">
+                    <i class="fa fa-facebook"></i> @Philly_tacos</a>
+                <a href="https://tiktok.com" class="btn btn-nav" target="_blank">
+                    <i class="fa fa-tiktok"></i> @Philly_tacos</a>
+            </section>
+            <section class="footer-info">
+            <h3>Explore</h3>
+                <div class="nav-footer">
+                    <a href="/#menu" class="btn btn-nav">Menu</a>
+                    <a href="/catering" class="btn btn-nav">Catering</a>
+                    <a href="/find-us" class="btn btn-nav">Find Us</a>
+                    <a href="/our-story" class="btn btn-nav">Our Story</a>
+                    <a href="/login" class="btn btn-nav"><span class="fa fa-user"></span> Login</a>
+                    <a href="/signup" class="btn btn-nav"><span class="fa fa-user"></span> Signup</a>
+                </div>
+            </section>
+        </section>
+    </footer>
+</body>
+</html>
