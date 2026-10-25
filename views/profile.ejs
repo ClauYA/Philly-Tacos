@@ -79,26 +79,26 @@
     <section class="table-wrapper">
       <table>
           <tr class="table-headings">
-          <th>Category</th>
-          <th>Title</th>
-          <th>Dscription</th>
-          <th>Price</th>
-          <th>Actions</th>
+            <th>Category</th>
+            <th>Title</th>
+            <th>Dscription</th>
+            <th>Price</th>
+            <th>Actions</th>
           </tr>
           <% if (menu.length === 0) { %>
           <tr class="table-body">
-          <td>There is no menu right now =(</td>
-          <% }else{ %>
-          <% menu.forEach(item => { %>   
-          <tr> 
-          <td><%= item.category %></td>
-          <td><%= item.title %></td>
-          <td><%= item.description %></td>
-          <td><%= item.price %></td>
-          <td>
-              <button type="button" class="btn btn-warning btn-m btn-edit" data-id="<%= item._id %>"><span class="fa fa-plus"></span> Edit</button>
-              <button type="button" class="btn btn-danger btn-m btn-delete" data-id="<%= item._id %>"><span class="fa fa-plus"></span> Delete</button>
-              </td>
+            <td>There is no menu right now =(</td>
+            <% }else{ %>
+            <% menu.forEach(item => { %>   
+            <tr> 
+            <td><%= item.category %></td>
+            <td><%= item.title %></td>
+            <td><%= item.description %></td>
+            <td><%= item.price %></td>
+            <td>
+                <button type="button" class="btn btn-warning btn-m btn-edit" data-id="<%= item._id %>"><span class="fa fa-plus"></span> Edit</button>
+                <button type="button" class="btn btn-danger btn-m btn-delete" data-id="<%= item._id %>"><span class="fa fa-plus"></span> Delete</button>
+                </td>
           </tr>
           <% }) %>
           <% } %>

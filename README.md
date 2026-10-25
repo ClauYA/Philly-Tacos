@@ -1,4 +1,7 @@
-# Philly Tacos
+# Philly Tacos 🌮
+
+![menu section](assets/menu.png)
+![profile page](assets/profile.png)
 
 Web app for a Mexican restaurant. Visitors can browse their menu, information of the restaurant,
 and registered users can log in and manage the menu (create, edit, delete items) from a private profile page.
